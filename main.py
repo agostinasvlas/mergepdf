@@ -2,7 +2,7 @@ from PyPDF2 import PdfMerger
 import os
 merger = PdfMerger()
 
-pdfs='catalogos/'
+pdfs='pdfs/'
 
 # Recorre todos los archivos en la carpeta
 for archivo in os.listdir(pdfs):
@@ -11,7 +11,7 @@ for archivo in os.listdir(pdfs):
         merger.append(os.path.join(pdfs, archivo))
 
 # Guarda el PDF combinado
-output_file = 'catalogo.pdf'
+output_file = 'pdf_unido.pdf'
 merger.write(output_file)
 merger.close()
 
